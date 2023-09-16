@@ -6,6 +6,14 @@ volumes:
   pg_data:
   solr_data:
 
+endpoints:
+  labels:
+    dev.okteto.com/endpoints: https://nginx-${OKTETO_NAMESPACE}.${OKTETO_DOMAIN}
+  rules:
+    - path: /
+      service: nginx
+      port: 80
+
 services:
 
   nginx:
