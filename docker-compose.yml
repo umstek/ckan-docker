@@ -20,7 +20,7 @@ services:
       ckan:
         condition: service_healthy
     ports:
-      - "0.0.0.0:${NGINX_SSLPORT_HOST}:${NGINX_SSLPORT}"
+      - "${NGINX_SSLPORT_HOST}:${NGINX_SSLPORT}"
     
   ckan:
     container_name: ${CKAN_CONTAINER_NAME}
