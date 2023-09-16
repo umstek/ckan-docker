@@ -12,7 +12,7 @@ endpoints:
   rules:
     - path: /
       service: nginx
-      port: 81
+      port: 80
 
 services:
 
