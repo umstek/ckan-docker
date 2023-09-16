@@ -12,7 +12,7 @@ endpoints:
   rules:
     - path: /
       service: nginx
-      port: 80
+      port: 81
 
 services:
 
@@ -28,7 +28,7 @@ services:
       ckan:
         condition: service_healthy
     ports:
-      - "${NGINX_SSLPORT_HOST}:${NGINX_SSLPORT}"
+      - "${NGINX_PORT_HOST}:${NGINX_PORT}"
     
   ckan:
     container_name: ${CKAN_CONTAINER_NAME}
